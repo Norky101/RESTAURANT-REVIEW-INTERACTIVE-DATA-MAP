@@ -2,11 +2,11 @@
 
 **Description**
 
-'Where was this photo taken grandad/ma?' is the type of question you will likely receive one day. 
+'Where was this photo taken grandad/ma?' is the type of question you will likely receive one day.
 
-Sadly though the human memory is only so good and it will inevitably forget many things, especially when you take hundreds of pictures per vacation! 
+Sadly though the human memory is only so good and it will inevitably forget many things, especially when you take hundreds of pictures per vacation!
 
-Thankfully your problems are solved as I have developed a solution for this! By extracting the GPS data from your camera or phone and inputting that data into an interactive map now you can see exactly where your pictures were taken in the world!
+Thankfully your problems are solved as I have developed a computer program in Python that extracts the GPS data from your camera or phone and inputs that data into an interactive map. Now you can see exactly where your pictures were taken in the world by simply hovering the mouse over the icon on the map.
 
 **What was your motivation?**
 
