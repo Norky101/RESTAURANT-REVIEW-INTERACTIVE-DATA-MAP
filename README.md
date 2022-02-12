@@ -1,4 +1,4 @@
-**Interactive map using extracted photo metadata**
+**Interactive map expressing geolocations of places I have visited**
 
 **Description**
 
@@ -6,7 +6,7 @@
 
 Sadly though the human memory is only so good and it will inevitably forget many things, especially when you take hundreds of pictures per vacation!
 
-Thankfully your problems are solved as I have developed a computer program in Python that extracts the GPS data from your camera or phone and inputs that data into an interactive map. Now you can see exactly where your pictures were taken in the world by simply hovering the mouse over the icon on the map.
+Thankfully your problems are solved as I have developed a computer program in Python that can have your GPS data from your camera or phone inputted into an interactive map. Now you can see exactly where your pictures were taken in the world by simply hovering the mouse over the icon on the map.
 
 **What was your motivation?**
 
