@@ -1,4 +1,4 @@
-**Interactive map expressing geolocations of places I have visited**
+**INTERACTIVE-WORLD-MAP-USING-EXTRACTED-PHOTO-METADATA**
 
 **Description**
 
