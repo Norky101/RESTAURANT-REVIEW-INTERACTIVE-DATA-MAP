@@ -1,0 +1,194 @@
+#
+
+
+new_dataframe#!/usr/bin/env python
+# coding: utf-8
+
+# In[77]:
+
+
+# May need to restart kernel when ammending data file
+# Make sure data file lat and long are 8 didgits long ish
+# Make sure no additional stuff is in 'name' row
+
+import folium        #visualizing geospatial data libary
+import pandas as pd  #allows importation of various file formats
+
+
+data = pd.read_csv('/users/nameofuser/Desktop/map/mapdata.csv', on_bad_lines='skip') #reads file using pandas
+
+data.head (8)  #shows the top 7 rows of data from file in use
+
+
+# In[78]:
+
+
+# Creates the map object
+
+my_map = folium.Map(
+    location= [26.1601, -80.1265], 
+    zoom_start= 12.4,
+    tiles="OpenStreetMap"
+)
+
+
+# In[79]:
+
+
+# Every time this run it adds the same line to the DF
+
+new_dataframe = {
+    'name': [ 'Name:Billy Bobs Location:Fort Lauderdale Rating:5 Cost:$$'],
+    'latitude': [51.493401],
+    'longitude': [0.009801],
+    'visited': ['no'],
+    'rating': [5],
+    'rating': ['$']
+    }
+ 
+    
+# Make data frame of above data
+df = pd.DataFrame(new_dataframe)
+ 
+# append data frame to CSV file
+df.to_csv('/users/nameofuser/Desktop/map/mapdata.csv', mode='a', index=False, header=False)
+ 
+# print message
+print("Data appended successfully to seperate CSV file - see Jupyter home")
+
+
+# In[80]:
+
+
+# Iterates through the rows to display the data using Folium Marker
+
+for _, name in data.iterrows():#iterates through Pandas row data
+    #print (name)
+    folium.Marker(
+        
+        location=[name['latitude'],name['longitude']], # Location of marker 
+        
+        popup=name['name'], #Shows city name
+        
+        tooltip=name['name'], #tooltip allows mouse hovering to reveal name
+        
+ ).add_to(my_map)
+    
+my_map #prints map 
+
+
+# In[81]:
+
+
+#changing the marker colour depending on conditionals 
+
+# Not fully working
+    
+def select_marker_color(row):
+    if row ['visited'] == 'yes':
+        
+        if row ['cost'] == '$':
+            if row['rating'] <= '5':
+                return 'blue'
+            else:
+                return 'lightblue'
+            
+        elif row ['cost'] == '$$':
+            if row['rating'] > '7':
+                return 'orange'
+            else:
+                return 'red'
+            
+        elif row ['cost'] == '$$$':
+            if row['rating'] < '9':
+                return 'black'
+            else:
+                return 'gray'  
+    else:
+        return 'pink'
+            
+
+
+# In[82]:
+
+
+# Displays the colour assignment to data file in a new column and outputs it
+
+data['colour'] = data.apply(select_marker_color, axis=1)
+data.head(18)
+
+
+# In[83]:
+
+
+# Display for the markers
+
+for _, name in data.iterrows():
+    folium.Marker(
+        location=[name['latitude'], city['longitude']],
+        popup=name['name'], #ability to click icon and see name of city
+        tooltip=name['name'], #ability to see info without clicking
+        icon=folium.Icon(color=city['colour'], prefix ='fa', icon ='cutlery')#changes the icon to whatever shape you want-could use that as main photo section
+    ).add_to(my_map)
+    
+    
+my_map
+
+
+# In[84]:
+
+
+my_map.save('pizza_map.html') #saves it in a certain format of your choice e.g .jpeg
+
+
+# In[85]:
+
+
+# Replaces icons with a heatmap based on certain requirements
+
+# may highlight all areas regardless of requirements
+
+from folium import plugins
+from folium.plugins import HeatMap
+
+# 'df_acc' changes to 'cities'
+
+map_heat = folium.Map(location=[26.1601, -80.1265],
+                    zoom_start = 10) 
+
+# Ensure you're handing it floats
+data['latitude'] = data['latitude'].astype(float)
+data['longitude'] = data['longitude'].astype(float)
+
+# Filter the DF for rows, then columns, then remove NaNs
+heat_df = data[data['rating'] =='10'] 
+#heat_df = cities[['latitude', 'longitude']]
+heat_df = data.dropna(axis=0, subset=['latitude','longitude'])
+
+# List comprehension to make out list of lists
+heat_data = [[row['latitude'],row['longitude']] for index, row in heat_df.iterrows()]
+
+# Plot it on the map
+HeatMap(heat_data).add_to(map_heat)
+
+# Display the map
+map_heat
+
+
+# In[87]:
+
+
+map_heat.save('pizza_heat_map.html') #saves it in a certain format of your choice e.g .jpeg
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
