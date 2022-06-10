@@ -28,9 +28,8 @@ Folium library was used to create the map.
 Pandas library was used to read the database file. 
 Jupyter Notebook was used for streamlining code and the efficiency of testing it.
 
-**Some of the challenges you faced and features you hope to implement in the future.**
+**Features you hope to implement in the future.**
 
-The whole thing was a challenge as I am currently only passively self-taught as I have not taken any CS classes yet in school. 
-Secondly, I want to turn this program into a website where anyone can upload their forgotten pictures and find out where they were taken.
+I want to turn this program into a website where anyone can upload their forgotten pictures and find out where they were taken.
 
 Hopefully you find some use and joy out of this project!
