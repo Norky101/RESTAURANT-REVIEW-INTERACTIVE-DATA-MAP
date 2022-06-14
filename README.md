@@ -19,9 +19,12 @@ This project stands out because anyone can use it and it solves the problem of h
 
 **Why do you use the technologies I used?**
 
-Python 
+Python.
+
 Folium library was used to create the map. 
+
 Pandas library was used to read and create the database file. 
+
 Jupyter Notebook was used for streamlining code and the efficiency of testing it.
 
 **Features you hope to implement in the future.**
