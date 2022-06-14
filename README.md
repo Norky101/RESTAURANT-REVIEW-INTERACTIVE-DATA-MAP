@@ -1,7 +1,7 @@
 **RESTAURANT REVIEW INTERACTIVE DATA MAP**
 
 **Description**
-This program creates an interactive world map that stores the data a user has inputted about a restaurant they have or want to visit. The inputted information is then displayed in a easy to undertand manner which can help the user make an informed decision about where they want to eat.
+This program creates an interactive world map that stores the data a user has inputted about a restaurant they have or want to visit. The inputted information is then displayed in an easy to understand manner which can help the user make an informed decision about where they want to eat.
 
 
 **What was your motivation?**
