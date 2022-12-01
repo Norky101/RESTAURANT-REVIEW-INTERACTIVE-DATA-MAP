@@ -19,7 +19,9 @@ Practical solution to a common problem.
 **What technologies did I use?**
 
 Python.
+
 Folium library was used to create the map.
+
 Pandas library was used to read and create the database file.
 
 
