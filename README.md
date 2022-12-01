@@ -5,6 +5,7 @@
 This program creates an interactive world map that stores the data a user has inputted about a restaurant they have or want to visit. The inputted information is then displayed in an easy-to-understand manner which can help the user make an informed decision about where they want to eat.
 
 **What was my motivation?**
+
 As a student living on a budget when I want to eat out, I want to make sure my money is going to something worthwhile that will make my desire to feast fulfilled.
 
 **What problem does it solve?**
