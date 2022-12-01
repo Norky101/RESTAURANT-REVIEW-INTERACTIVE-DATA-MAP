@@ -14,7 +14,7 @@ When you are hungry you are biased as to was a restaurant any good. However, if 
 
 **What makes my project stand out?**
 
-I solved two problems in one. Firstly, was the problem of not knowing where some of my pictures were taken. Secondly, I solved the lack of use of the solo numbers presented. This project stands out because anyone can use it and it solves the problem of having to search through each picture via the camera's screen or laptop.
+Practical solution to a common problem.
 
 **What technologies did I use?**
 
