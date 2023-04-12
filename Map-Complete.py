@@ -12,7 +12,7 @@ import pandas as pd  #allows importation of various file formats
 
 # In[16]:
 
-
+# Initialize the map
 my_map = folium.Map(
     location= [51.477928,-0.001545], #center of the map-Greenwich meridian
     zoom_start=2)
@@ -21,6 +21,7 @@ my_map
 
 # In[17]:
 
+# Initialize the database 
 
 cities = pd.read_csv('mapdata.csv') #reads file using pandas
 cities.head (7)  #shows the top 6 rows of data from file in use
@@ -36,6 +37,8 @@ my_map = folium.Map(
     zoom_start=2
 )
 
+# Adds markers from Database to the map.
+
 for _, city in cities.iterrows(): #iterates through Pandas data file
     folium.Marker(
         location=[city['latitude'], city['longitude']],
@@ -50,6 +53,7 @@ my_map #prints map
 
 
 #changing the marker colour
+
 def select_marker_color(row):
     if row['lived'] == 'yes':
         return 'green'
@@ -58,20 +62,17 @@ def select_marker_color(row):
     return 'red'
 
 
-# In[25]:
-
 
 cities['color'] = cities.apply(select_marker_color, axis=1)
 cities.head(3)
 
-
-# In[26]:
 
 
 my_map = folium.Map(
     location= [51.477928,-0.001545], 
     zoom_start=2
 )
+
 
 for _, city in cities.iterrows():
     folium.Marker(
@@ -88,16 +89,4 @@ my_map
 
 
 my_map.save('my_basic_map.html') #saves it in a certain format of your choice
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
