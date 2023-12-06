@@ -10,7 +10,7 @@ As a student living on a budget when I want to eat out, I want to make sure my m
 
 **What problem does it solve?**
 
-When you are hungry you are biased as to was a restaurant any good. However, if you have easy access to data from your own opinion, you can then make a more informed decision.
+When you are hungry you are biased as to whether a restaurant is any good. However, if you have easy-to-access data from your own opinion, you can then make a more informed decision. 
 
 **What makes my project stand out?**
 
