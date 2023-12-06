@@ -14,7 +14,7 @@ When you are hungry you are biased as to was a restaurant any good. However, if 
 
 **What makes my project stand out?**
 
-Practical solution to a common problem.
+A practical solution to a common problem.
 
 **What technologies did I use?**
 
@@ -22,7 +22,7 @@ Python.
 
 Folium library was used to create the map.
 
-Pandas library was used to read and create the database file.
+Pandas library was used to read and create the database CSV file.
 
 
 **Example of a zoomed-in view of the restaurant markers with the relevant information displayed on them such as pricing, score, name, etc.**
